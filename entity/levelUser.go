@@ -4,6 +4,7 @@ type LevelUser struct {
 	Id                int64 `json:"id"`
 	UserId            int64 `json:"user_id" gorm:"unique"`
 	LevelUserTelegram int64
+	LevelUserData     LevelUserData `gorm:"foreignKey:Id;references:LevelUserTelegram"`
 	NextLevelExp      int64
 }
 
