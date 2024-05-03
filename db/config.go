@@ -2,7 +2,7 @@ package db
 
 type ConfigEnv struct {
 	PostgresUrl        string `env:"POSTGRES_URL"`
-	PostgresPort       int64  `env:"POSTGRES_PORT"`
+	PostgresPort       string `env:"POSTGRES_PORT"`
 	PostgresDb         string `env:"POSTGRES_DB"`
 	PostgresUsername   string `env:"POSTGRES_USERNAME"`
 	PostgresPassword   string `env:"POSTGRES_PASSWORD"`
@@ -14,5 +14,5 @@ type ConfigEnv struct {
 }
 
 func test() {
-	
+
 }
