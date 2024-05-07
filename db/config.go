@@ -12,7 +12,3 @@ type ConfigEnv struct {
 	SetMaxOpenConns    int    `env:"SET_MAX_OPEN_CONNS"`
 	SetConnMaxLifetime int    `env:"SET_CONN_MAX_LIFETIME"`
 }
-
-func test() {
-
-}
