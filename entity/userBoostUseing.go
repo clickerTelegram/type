@@ -9,7 +9,7 @@ const (
 	FullTank
 )
 
-type UserBoostUsage struct {
+type UserBoostUsageDb struct {
 	Id         uint64 `gorm:"primaryKey"`
 	UserID     uint
 	BoostType  BoostType
