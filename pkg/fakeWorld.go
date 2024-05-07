@@ -6,7 +6,7 @@ import (
 )
 
 func GenerateFakeWord() string {
-	minLength := 8
+	minLength := 4
 	maxLength := 16
 	fakeWord := fakelish.GenerateFakeWord(minLength, maxLength)
 	fakeWord = strings.Title(fakeWord)
