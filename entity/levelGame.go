@@ -15,5 +15,5 @@ type LevelGame struct {
 	Number            uint
 	RequiredCoins     uint
 	Type              LevelType
-	RewardDescription string
+	RewardDescription uint64
 }
