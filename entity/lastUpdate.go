@@ -5,7 +5,7 @@ import "time"
 type LastUpdateOnlineDb struct {
 	ID         uint   `gorm:"primaryKey"`
 	UserID     uint64 `gorm:"unique"`
-	TimeOnline time.Time
+	TimeOnline int64
 }
 
 type LastTapUserDb struct {
