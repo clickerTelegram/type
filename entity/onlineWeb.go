@@ -7,5 +7,5 @@ type OnlineWebPlayer struct {
 
 type OnlineBotPlayer struct {
 	PlayerId      int64 `gorm:"primaryKey"`
-	TimeOnlineWeb int64
+	TimeOnlineBot int64
 }
