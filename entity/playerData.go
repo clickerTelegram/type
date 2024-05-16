@@ -14,6 +14,7 @@ type PlayerData struct {
 	AccessToken     AccessToken     `gorm:"foreignKey:PlayerId;references:PlayerId"`
 	LastTapPlayer   LastTapPlayer   `gorm:"foreignKey:PlayerId;references:PlayerId"`
 	OnlineWebPlayer OnlineWebPlayer `gorm:"foreignKey:PlayerId;references:PlayerId"`
+	OnlineBotPlayer OnlineBotPlayer `gorm:"foreignKey:PlayerId;references:PlayerId"`
 
 	StatsData StatsData `gorm:"foreignKey:PlayerId;references:PlayerId"`
 
@@ -23,6 +24,7 @@ type PlayerData struct {
 	PlayerLevelDB  PlayerLevelsDB `gorm:"foreignKey:Id;references:PlayerLevel"`
 	Player         Player         `gorm:"foreignKey:PlayerId;references:PlayerId"`
 
+	ClaimsData       []ClaimsData         `gorm:"foreignKey:PlayerId;references:PlayerId"`
 	ReferralPlayer   []ReferralPlayerData `gorm:"foreignKey:PlayerDataId;references:PlayerId"`
 	MissionsComplete []MissionsComplete   `gorm:"foreignKey:PlayerId;references:PlayerId"`
 }
