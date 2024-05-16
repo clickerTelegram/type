@@ -4,6 +4,7 @@ type StatsData struct {
 	PlayerId int64 `gorm:"primaryKey"`
 	Taps     int64
 	Shares   int64
+	Energy   int64
 	RefIn    int64
 	RefOut   int64
 	RefCount int64
