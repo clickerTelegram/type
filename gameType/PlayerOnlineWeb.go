@@ -16,4 +16,6 @@ type PlayerOnlineWeb struct {
 	LevelEnergy  int64
 	LevelCharge  int64
 	LevelLeagues int64
+
+	PlayerOnlineWeb int64
 }
