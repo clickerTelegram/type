@@ -17,5 +17,5 @@ type PlayerOnlineWeb struct {
 	LevelCharge  int64
 	LevelLeagues int64
 
-	PlayerOnlineWeb int64
+	LastOnlineWeb int64
 }
