@@ -6,23 +6,23 @@ type LoginRes struct {
 	AccessToken string   `json:"access_token"`
 	Player      Player   `json:"player"`
 	Account     Account  `json:"account"`
-	BotShares   int      `json:"bot_shares"`
+	BotShares   int64    `json:"bot_shares"`
 	Conf        Conf     `json:"conf"`
 	Settings    Settings `json:"settings"`
 }
 type Boost struct {
 	Type string `json:"type"`
-	Cnt  int    `json:"cnt"`
-	End  int    `json:"end"`
+	Cnt  int64  `json:"cnt"`
+	End  int64  `json:"end"`
 }
 type Stat struct {
-	Taps   int `json:"taps"`
-	RefIn  int `json:"ref_in"`
-	RefOut int `json:"ref_out"`
-	RefCnt int `json:"ref_cnt"`
-	Earned int `json:"earned"`
-	Reward int `json:"reward"`
-	Spent  int `json:"spent"`
+	Taps   int64 `json:"taps"`
+	RefIn  int64 `json:"ref_in"`
+	RefOut int64 `json:"ref_out"`
+	RefCnt int64 `json:"ref_cnt"`
+	Earned int64 `json:"earned"`
+	Reward int64 `json:"reward"`
+	Spent  int64 `json:"spent"`
 }
 type Player struct {
 	ID          int64   `json:"id"`
@@ -30,13 +30,13 @@ type Player struct {
 	FullName    string  `json:"full_name"`
 	LoginTs     int64   `json:"login_ts"`
 	Time        int64   `json:"time"`
-	Energy      int     `json:"energy"`
-	Shares      int     `json:"shares"`
-	Tokens      int     `json:"tokens"`
-	Ligue       int     `json:"ligue"`
-	EnergyLevel int     `json:"energy_level"`
-	ChargeLevel int     `json:"charge_level"`
-	TapLevel    int     `json:"tap_level"`
+	Energy      int64   `json:"energy"`
+	Shares      int64   `json:"shares"`
+	Tokens      int64   `json:"tokens"`
+	Ligue       int64   `json:"ligue"`
+	EnergyLevel int64   `json:"energy_level"`
+	ChargeLevel int64   `json:"charge_level"`
+	TapLevel    int64   `json:"tap_level"`
 	TapBot      bool    `json:"tap_bot"`
 	Boost       []Boost `json:"boost"`
 	BoostTime   int64   `json:"boost_time"`
@@ -61,40 +61,40 @@ type Account struct {
 	Missions MissionsAccount `json:"missions"`
 }
 type EnergyLevels struct {
-	Limit int `json:"limit"`
-	Price int `json:"price"`
+	Limit int64 `json:"limit"`
+	Price int64 `json:"price"`
 }
 type ChargeLevels struct {
-	Rate  int `json:"rate"`
-	Price int `json:"price"`
+	Rate  int64 `json:"rate"`
+	Price int64 `json:"price"`
 }
 type TapLevels struct {
-	Rate   int `json:"rate"`
-	Energy int `json:"energy"`
-	Price  int `json:"price"`
+	Rate   int64 `json:"rate"`
+	Energy int64 `json:"energy"`
+	Price  int64 `json:"price"`
 }
 type Ligues struct {
 	Name      string `json:"name"`
 	Title     string `json:"title"`
-	Score     int    `json:"score"`
-	Reward    int    `json:"reward"`
-	RewardRef int    `json:"reward_ref"`
+	Score     int64  `json:"score"`
+	Reward    int64  `json:"reward"`
+	RewardRef int64  `json:"reward_ref"`
 }
 type RefRewards struct {
-	Cnt    int `json:"cnt"`
-	Reward int `json:"reward"`
+	Cnt    int64 `json:"cnt"`
+	Reward int64 `json:"reward"`
 }
 type Energy struct {
-	Duration int `json:"duration"`
+	Duration int64 `json:"duration"`
 }
 type Turbo struct {
-	Duration int `json:"duration"`
-	RateMult int `json:"rateMult"`
+	Duration int64 `json:"duration"`
+	RateMult int64 `json:"rateMult"`
 }
 type Double struct {
-	Duration int `json:"duration"`
-	RateMult int `json:"rateMult"`
-	Energy   int `json:"energy"`
+	Duration int64 `json:"duration"`
+	RateMult int64 `json:"rateMult"`
+	Energy   int64 `json:"energy"`
 }
 type Boosts struct {
 	Energy Energy `json:"energy"`
@@ -102,8 +102,8 @@ type Boosts struct {
 	Double Double `json:"double"`
 }
 type TapBot struct {
-	Duration int `json:"duration"`
-	Price    int `json:"price"`
+	Duration int64 `json:"duration"`
+	Price    int64 `json:"price"`
 }
 
 type ItemsMissions struct {
@@ -115,7 +115,7 @@ type MissionsConf struct {
 	ID          string          `json:"id"`
 	Title       string          `json:"title"`
 	Description string          `json:"description"`
-	Reward      int             `json:"reward"`
+	Reward      int64           `json:"reward"`
 	Items       []ItemsMissions `json:"items"`
 }
 type Conf struct {
@@ -130,5 +130,5 @@ type Conf struct {
 }
 type Settings struct {
 	StartDate       time.Time `json:"start_date"`
-	SubmitIntervalS int       `json:"submit_interval_s"`
+	SubmitIntervalS int64     `json:"submit_interval_s"`
 }
