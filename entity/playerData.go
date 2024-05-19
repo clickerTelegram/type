@@ -1,7 +1,7 @@
 package entity
 
 type PlayerData struct {
-	Id          int64 `json:"id"`
+	Id          int64 `gorm:"primaryKey"`
 	PlayerId    int64 `json:"player_id" gorm:"primaryKey"`
 	TapLevel    int64 `json:"tap_level"`
 	EnergyLevel int64 `json:"energy_level"`

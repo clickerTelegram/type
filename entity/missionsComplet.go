@@ -1,7 +1,7 @@
 package entity
 
 type MissionsComplete struct {
-	Id             int64
+	Id             int64 `gorm:"primaryKey"`
 	PlayerId       int64
 	Verified       bool
 	VerifiedAt     int64

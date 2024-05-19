@@ -1,7 +1,7 @@
 package entity
 
 type LeaguesDB struct {
-	Id             int64  `json:"-"`
+	Id             int64  `gorm:"primaryKey"`
 	Name           string `json:"name"`
 	Title          string `json:"title"`
 	Score          int64  `json:"score"`
