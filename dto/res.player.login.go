@@ -25,23 +25,23 @@ type Stat struct {
 	Spent  int64 `json:"spent"`
 }
 type Player struct {
-	ID          int64   `json:"id"`
-	Name        string  `json:"name"`
-	FullName    string  `json:"full_name"`
-	LoginTs     int64   `json:"login_ts"`
-	Time        int64   `json:"time"`
-	Energy      int64   `json:"energy"`
-	Shares      int64   `json:"shares"`
-	Tokens      int64   `json:"tokens"`
-	Ligue       int64   `json:"ligue"`
-	EnergyLevel int64   `json:"energy_level"`
-	ChargeLevel int64   `json:"charge_level"`
-	TapLevel    int64   `json:"tap_level"`
-	TapBot      bool    `json:"tap_bot"`
-	Boost       []Boost `json:"boost"`
-	BoostTime   int64   `json:"boost_time"`
-	Claims      []any   `json:"claims"`
-	Stat        Stat    `json:"stat"`
+	ID          int64         `json:"id"`
+	Name        string        `json:"name"`
+	FullName    string        `json:"full_name"`
+	LoginTs     int64         `json:"login_ts"`
+	Time        int64         `json:"time"`
+	Energy      int64         `json:"energy"`
+	Shares      int64         `json:"shares"`
+	Tokens      int64         `json:"tokens"`
+	Ligue       int64         `json:"ligue"`
+	EnergyLevel int64         `json:"energy_level"`
+	ChargeLevel int64         `json:"charge_level"`
+	TapLevel    int64         `json:"tap_level"`
+	TapBot      bool          `json:"tap_bot"`
+	Boost       []Boost       `json:"boost"`
+	BoostTime   int64         `json:"boost_time"`
+	Claims      map[int64]any `json:"claims"`
+	Stat        Stat          `json:"stat"`
 }
 type ItemsActive struct {
 	Type       string `json:"type"`
@@ -49,8 +49,8 @@ type ItemsActive struct {
 	VerifiedAt int64  `json:"verified_at"`
 }
 type Active struct {
-	ID    string        `json:"id"`
-	Items []ItemsActive `json:"items"`
+	ID    string                `json:"id"`
+	Items map[int64]ItemsActive `json:"items"`
 }
 type MissionsAccount struct {
 	Completed []any    `json:"completed"`
@@ -112,21 +112,21 @@ type ItemsMissions struct {
 	Link string `json:"link,omitempty"`
 }
 type MissionsConf struct {
-	ID          string          `json:"id"`
-	Title       string          `json:"title"`
-	Description string          `json:"description"`
-	Reward      int64           `json:"reward"`
-	Items       []ItemsMissions `json:"items"`
+	ID          string                  `json:"id"`
+	Title       string                  `json:"title"`
+	Description string                  `json:"description"`
+	Reward      int64                   `json:"reward"`
+	Items       map[int64]ItemsMissions `json:"items"`
 }
 type Conf struct {
-	EnergyLevels []EnergyLevels `json:"energy_levels"`
-	ChargeLevels []ChargeLevels `json:"charge_levels"`
-	TapLevels    []TapLevels    `json:"tap_levels"`
-	Ligues       []Ligues       `json:"ligues"`
-	RefRewards   []RefRewards   `json:"ref_rewards"`
-	Boosts       Boosts         `json:"boosts"`
-	TapBot       TapBot         `json:"tap_bot"`
-	Missions     []MissionsConf `json:"missions"`
+	EnergyLevels map[int64]EnergyLevels `json:"energy_levels"`
+	ChargeLevels map[int64]ChargeLevels `json:"charge_levels"`
+	TapLevels    map[int64]TapLevels    `json:"tap_levels"`
+	Ligues       map[int64]Ligues       `json:"ligues"`
+	RefRewards   map[int64]RefRewards   `json:"ref_rewards"`
+	Boosts       Boosts                 `json:"boosts"`
+	TapBot       TapBot                 `json:"tap_bot"`
+	Missions     map[int64]MissionsConf `json:"missions"`
 }
 type Settings struct {
 	StartDate       time.Time `json:"start_date"`
