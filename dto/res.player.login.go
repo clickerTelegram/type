@@ -36,6 +36,7 @@ type Player struct {
 	Ligue       int64         `json:"ligue"`
 	EnergyLevel int64         `json:"energy_level"`
 	ChargeLevel int64         `json:"charge_level"`
+	PlayerLevel int64         `json:"player_level"`
 	TapLevel    int64         `json:"tap_level"`
 	TapBot      bool          `json:"tap_bot"`
 	Boost       []Boost       `json:"boost"`
@@ -68,6 +69,12 @@ type ChargeLevels struct {
 	Rate  int64 `json:"rate"`
 	Price int64 `json:"price"`
 }
+
+type PlayerLevels struct {
+	Score  int64 `json:"score"`
+	Reward int64 `json:"reward"`
+}
+
 type TapLevels struct {
 	Rate   int64 `json:"rate"`
 	Energy int64 `json:"energy"`
@@ -121,6 +128,7 @@ type MissionsConf struct {
 type Conf struct {
 	EnergyLevels map[int64]EnergyLevels `json:"energy_levels"`
 	ChargeLevels map[int64]ChargeLevels `json:"charge_levels"`
+	PlayerLevels map[int64]PlayerLevels `json:"player_levels"`
 	TapLevels    map[int64]TapLevels    `json:"tap_levels"`
 	Ligues       map[int64]Ligues       `json:"ligues"`
 	RefRewards   map[int64]RefRewards   `json:"ref_rewards"`

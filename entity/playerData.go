@@ -9,6 +9,7 @@ type PlayerData struct {
 	Leagues     int64 `json:"leagues"`
 	PlayerLevel int64 `json:"player_level"`
 	TabBot      bool  `json:"tab_bot"`
+	BotCharge   int64 `json:"bot_charge"`
 
 	TapLevelDB      TapLevelsDB     `gorm:"foreignKey:Id;references:TapLevel"`
 	AccessToken     AccessToken     `gorm:"foreignKey:PlayerId;references:PlayerId"`
