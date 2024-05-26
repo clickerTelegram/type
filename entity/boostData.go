@@ -6,6 +6,6 @@ type BoostDataDb struct {
 	Type     BoostDBType
 	BoostId  int64
 	Count    int64
-	Boosts   Boosts `gorm:"foreignKey:BoostId;references:ID"`
+	Boosts   Boosts `gorm:"foreignKey:Id;references:BoostId"`
 	CreateAt int64  `gorm:"autoCreateTime"`
 }
