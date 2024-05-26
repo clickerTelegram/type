@@ -28,4 +28,5 @@ type PlayerData struct {
 	ClaimsData       []ClaimsData         `gorm:"foreignKey:PlayerId;references:PlayerId"`
 	ReferralPlayer   []ReferralPlayerData `gorm:"foreignKey:PlayerDataId;references:PlayerId"`
 	MissionsComplete []MissionsComplete   `gorm:"foreignKey:PlayerId;references:PlayerId"`
+	BootsData        []BoostDataDb        `gorm:"foreignKey:PlayerId;references:PlayerId"`
 }
