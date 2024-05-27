@@ -91,23 +91,12 @@ type RefRewards struct {
 	Cnt    int64 `json:"cnt"`
 	Reward int64 `json:"reward"`
 }
-type Energy struct {
-	Duration int64 `json:"duration"`
-}
-type Turbo struct {
-	Duration int64 `json:"duration"`
-	RateMult int64 `json:"rateMult"`
-}
-type Double struct {
+type Boots struct {
 	Duration int64 `json:"duration"`
 	RateMult int64 `json:"rateMult"`
 	Energy   int64 `json:"energy"`
 }
-type Boosts struct {
-	Energy Energy `json:"energy"`
-	Turbo  Turbo  `json:"turbo"`
-	Double Double `json:"double"`
-}
+
 type TapBot struct {
 	Duration int64 `json:"duration"`
 	Price    int64 `json:"price"`
@@ -132,7 +121,7 @@ type Conf struct {
 	TapLevels    map[int64]TapLevels    `json:"tap_levels"`
 	Ligues       map[int64]Ligues       `json:"ligues"`
 	RefRewards   map[int64]RefRewards   `json:"ref_rewards"`
-	Boosts       Boosts                 `json:"boosts"`
+	Boosts       map[string]Boots       `json:"boosts"`
 	TapBot       TapBot                 `json:"tap_bot"`
 	Missions     map[int64]MissionsConf `json:"missions"`
 }
