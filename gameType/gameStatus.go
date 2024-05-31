@@ -1,7 +1,9 @@
 package gameType
 
 type GameStatus struct {
-	TapAll       int64
-	PlayerOnline int64
-	EarnedAll    int64
+	TotalShareBalance int64
+	TotalTouches      int64
+	TotalPlayers      int64
+	DailyUsers        int64
+	OnlinePlayers     int64
 }
