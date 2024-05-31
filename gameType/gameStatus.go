@@ -1,8 +1,10 @@
 package gameType
 
+import "math/big"
+
 type GameStatus struct {
-	TotalShareBalance int64
-	TotalTouches      int64
+	TotalShareBalance big.Int
+	TotalTouches      big.Int
 	TotalPlayers      int64
 	DailyUsers        int64
 	OnlinePlayers     int64
