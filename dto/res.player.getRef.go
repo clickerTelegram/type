@@ -1,7 +1,7 @@
 package dto
 
 type GetRef struct {
-	Refs RefList `json:"refs"`
+	Refs []RefList `json:"refs"`
 }
 
 type RefList struct {
