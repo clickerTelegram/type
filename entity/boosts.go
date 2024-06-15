@@ -8,7 +8,7 @@ const (
 )
 
 type Boosts struct {
-	Id        string ` gorm:"primaryKey"`
+	Id        int64 ` gorm:"primaryKey"`
 	Type      BoostDBType
 	Duration  int64 `json:"duration"`
 	RateMulti int64 `json:"rate_multi"`
