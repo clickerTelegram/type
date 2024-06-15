@@ -1,7 +1,7 @@
 package entity
 
 type BoostDataDb struct {
-	Id       int64 `gorm:"primaryKey"`
+	Id       string `gorm:"primaryKey"`
 	PlayerId int64
 	Type     BoostDBType
 	BoostId  int64
