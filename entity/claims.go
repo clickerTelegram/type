@@ -1,7 +1,7 @@
 package entity
 
 type ClaimsData struct {
-	Id                int64 `gorm:"primaryKey"`
+	Id                string `gorm:"primaryKey"`
 	PlayerId          int64
 	Active            bool
 	LeaguesDB         int64 `gorm:"null"`
