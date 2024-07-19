@@ -25,24 +25,25 @@ type Stat struct {
 	Spent  int64 `json:"spent"`
 }
 type Player struct {
-	ID          int64         `json:"id"`
-	Name        string        `json:"name"`
-	FullName    string        `json:"full_name"`
-	LoginTs     int64         `json:"login_ts"`
-	Time        int64         `json:"time"`
-	Energy      int64         `json:"energy"`
-	Shares      int64         `json:"shares"`
-	Tokens      int64         `json:"tokens"`
-	Ligue       int64         `json:"ligue"`
-	EnergyLevel int64         `json:"energy_level"`
-	ChargeLevel int64         `json:"charge_level"`
-	PlayerLevel int64         `json:"player_level"`
-	TapLevel    int64         `json:"tap_level"`
-	TapBot      bool          `json:"tap_bot"`
-	Boost       []Boost       `json:"boost"`
-	BoostTime   int64         `json:"boost_time"`
-	Claims      map[int64]any `json:"claims"`
-	Stat        Stat          `json:"stat"`
+	ID            int64         `json:"id"`
+	Name          string        `json:"name"`
+	FullName      string        `json:"full_name"`
+	WalletAddress string        `json:"wallet_address"`
+	LoginTs       int64         `json:"login_ts"`
+	Time          int64         `json:"time"`
+	Energy        int64         `json:"energy"`
+	Shares        int64         `json:"shares"`
+	Tokens        int64         `json:"tokens"`
+	Ligue         int64         `json:"ligue"`
+	EnergyLevel   int64         `json:"energy_level"`
+	ChargeLevel   int64         `json:"charge_level"`
+	PlayerLevel   int64         `json:"player_level"`
+	TapLevel      int64         `json:"tap_level"`
+	TapBot        bool          `json:"tap_bot"`
+	Boost         []Boost       `json:"boost"`
+	BoostTime     int64         `json:"boost_time"`
+	Claims        map[int64]any `json:"claims"`
+	Stat          Stat          `json:"stat"`
 }
 type ItemsActive struct {
 	Type       string `json:"type"`
