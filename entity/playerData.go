@@ -25,8 +25,9 @@ type PlayerData struct {
 	PlayerLevelDB  PlayerLevelsDB `gorm:"foreignKey:Id;references:PlayerLevel"`
 	Player         Player         `gorm:"foreignKey:PlayerId;references:PlayerId"`
 
-	ClaimsData       []ClaimsData         `gorm:"foreignKey:PlayerId;references:PlayerId"`
-	ReferralPlayer   []ReferralPlayerData `gorm:"foreignKey:PlayerDataId;references:PlayerId"`
-	MissionsComplete []MissionsComplete   `gorm:"foreignKey:PlayerId;references:PlayerId"`
-	BootsData        []BoostDataDb        `gorm:"foreignKey:PlayerId;references:PlayerId"`
+	ClaimsData           []ClaimsData          `gorm:"foreignKey:PlayerId;references:PlayerId"`
+	ReferralPlayer       []ReferralPlayerData  `gorm:"foreignKey:PlayerDataId;references:PlayerId"`
+	MissionsComplete     []MissionsComplete    `gorm:"foreignKey:PlayerId;references:PlayerId"`
+	MissionsCompleteData []MissionCompleteData `gorm:"foreignKey:PlayerId;references:PlayerId"`
+	BootsData            []BoostDataDb         `gorm:"foreignKey:PlayerId;references:PlayerId"`
 }

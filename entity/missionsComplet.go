@@ -11,3 +11,10 @@ type MissionsComplete struct {
 	MissionsDB     MissionsDB      `gorm:"foreignKey:Id;references:MissionsId"`
 	MissionsItemDB MissionsItemsDB `gorm:"foreignKey:Id;references:MissionsItemId"`
 }
+
+type MissionCompleteData struct {
+	Id         string `gorm:"primaryKey"`
+	PlayerId   int64
+	MissionsId int64
+	Verified   bool
+}
