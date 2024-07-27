@@ -9,6 +9,7 @@ type LoginRes struct {
 	BotShares   int64    `json:"bot_shares"`
 	Conf        Conf     `json:"conf"`
 	Settings    Settings `json:"settings"`
+	IsBot       bool     `json:"is_bot"`
 }
 type Boost struct {
 	Type string `json:"type"`
