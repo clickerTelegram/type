@@ -9,7 +9,6 @@ type LoginRes struct {
 	BotShares   int64    `json:"bot_shares"`
 	Conf        Conf     `json:"conf"`
 	Settings    Settings `json:"settings"`
-	IsBot       bool     `json:"is_bot"`
 }
 type Boost struct {
 	Type string `json:"type"`
@@ -45,6 +44,7 @@ type Player struct {
 	BoostTime     int64         `json:"boost_time"`
 	Claims        map[int64]any `json:"claims"`
 	Stat          Stat          `json:"stat"`
+	IsBot         bool          `json:"is_bot"`
 }
 type ItemsActive struct {
 	Type       string `json:"type"`
