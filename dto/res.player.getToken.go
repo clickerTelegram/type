@@ -9,4 +9,5 @@ type ResGetToken struct {
 	IsFee      bool    `json:"is_fee"`
 	Command    string  `json:"command"`
 	TokenUSD   float64 `json:"token_usd"`
+	Address    string  `json:"address"`
 }
