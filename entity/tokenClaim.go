@@ -10,5 +10,6 @@ type TokenClaim struct {
 	Ref      int64
 	Total    int64
 	IsFee    bool
+	Address  string
 	CreateAt int64 `gorm:"autoCreateTime"`
 }
